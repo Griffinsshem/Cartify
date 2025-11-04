@@ -2,7 +2,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #131921;
+  background-color: #07119b;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -11,7 +11,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  color: #ff9f00;
+  color: #fff;
   margin: 0 25px;
 }
 
@@ -43,7 +43,7 @@
 .header__searchIcon {
   padding: 5px;
   height: 22px ! important;
-  background-color: #ff9f00;
+  background-color: #fff;
 }
 
 .header__nav {
