@@ -9,6 +9,7 @@
   max-width: 400px;
   min-width: 100px;
   background-color: rgba(223, 219, 219, 0.952);
+  border-radius: 4px;
   z-index: 1;
 }
 
