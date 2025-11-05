@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-// Importing Material UI icons
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
@@ -30,8 +29,8 @@ function Header() {
           <span className="nav__itemLineTwo">Cart</span>
         </div>
 
-        <div className="nav__item">
-          <ShoppingBasketIcon className="itemBasket" />
+        <div className="nav__itemBasket">
+          <ShoppingBasketIcon />
           <span className="nav__itemLineTwo nav__basketCount">0</span>
         </div>
 
