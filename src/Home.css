@@ -43,7 +43,8 @@
 }
 
 .home__heroSub {
-  top: 40%;
+  top: 30%;
   font-size: 1.3rem;
   opacity: 0.9;
+  font-weight: bold;
 }
