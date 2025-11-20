@@ -61,17 +61,17 @@ function Home() {
             />
             <Product
               id="90829332"
-              title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
-              price={29.99}
+              title="Bennet Mystic 15.6 inch Laptop Shoulder Messenger Sling Office Bag, Water Repellent Fabric for Men and Women (Blue)"
+              price={11.96}
               rating={5}
-              image="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
+              image="https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg"
             />
             <Product
               id="90829332"
-              title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-              price={239.0}
+              title="All the light we cannot see: The Breathtaking World Wide Bestseller Paperback"
+              price={199.99}
               rating={4}
-              image="https://images-na.ssl-images-amazon.com/images/I/61etD4-IrPL._AC_SX679_.jpg"
+              image="https://images-eu.ssl-images-amazon.com/images/I/514kNkerQ0L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
             />
             <Product
               id="90829332"
@@ -106,10 +106,10 @@ function Home() {
             />
             <Product
               id="90829332"
-              title="Samsung Galaxy Watch 4 (Bluetooth, 44mm) – Silver"
+              title="All the light we cannot see: The Breathtaking World Wide Bestseller Paperback"
               price={199.99}
               rating={4}
-              image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+              image="https://images-eu.ssl-images-amazon.com/images/I/514kNkerQ0L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
             />
           </div>
 
