@@ -7,11 +7,18 @@ function Home() {
     <div>
       <div className="home">
         <div className="home__container">
-          <img
-            className="home__image"
-            src="https://images.unsplash.com/photo-1606824722920-4c652a70f348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHN1cGVybWFya2V0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
-            alt="Home Banner"
-          />
+          <div>
+            <h1 className="home__heroText">Cartify</h1>
+            <p className="home__heroSub">
+              Empowering customers with reliable, high-quality products designed to elevate their lifestyle.
+            </p>
+
+            <img
+              className="home__image"
+              src="https://images.unsplash.com/photo-1606824722920-4c652a70f348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHN1cGVybWFya2V0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
+              alt="Home Banner"
+            />
+          </div>
 
           <div className="home__row">
             <Product
