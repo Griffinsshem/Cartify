@@ -14,6 +14,7 @@ function Subtotal() {
             <small className="subtotal__gift">
               <input type="checkbox" /> This order contains a gift
             </small>
+            <button>Proceed to Checkout</button>
           </>
         )}
         decimalScale={2}
