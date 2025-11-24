@@ -23,11 +23,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
-
-        <div className="nav__item">
-          <span className="nav__itemLineOne">Hello Guest</span>
-          <span className="nav__itemLineTwo">Sign in</span>
-        </div>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <div className="nav__item">
+            <span className="nav__itemLineOne">Hello Guest</span>
+            <span className="nav__itemLineTwo">Sign in</span>
+          </div>
+        </Link>
 
         <div className="nav__item">
           <span className="nav__itemLineOne">Your</span>
