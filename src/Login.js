@@ -12,7 +12,6 @@ function Login() {
     <div className='login'>
       <Link to='/' style={{ textDecoration: "none" }}>
         <div className='login__logo'>
-          {/* <LocalGroceryStoreIcon className='login__logoImage' fontSize='large' /> */}
           <h2 className='login__logoTitle'>Cartify Login</h2>
         </div>
       </Link>
