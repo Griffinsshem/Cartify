@@ -3,14 +3,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin: 10px;
+  margin: 5px 5px;
   padding: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   min-width: 100px;
   background-color: rgba(248, 242, 242, 0.95);
   border-radius: 4px;
   z-index: 1;
+  border: 2px solid blue;
 }
 
 .product__rating {
