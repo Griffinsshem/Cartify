@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from './Firebase';
 
+
 function Header() {
   const [{ basket, user }] = useStateValue();
 
