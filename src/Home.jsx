@@ -62,14 +62,14 @@ function Home() {
             <Product
               id="90829332"
               title="Bennet Mystic 15.6 inch Laptop Shoulder Messenger Sling Office Bag, Water Repellent Fabric for Men and Women (Blue)"
-              price={11.96}
+              price={11.9}
               rating={5}
               image="https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg"
             />
             <Product
               id="90829332"
               title="All the light we cannot see: The Breathtaking World Wide Bestseller Paperback"
-              price={199.99}
+              price={25.99}
               rating={4}
               image="https://images-eu.ssl-images-amazon.com/images/I/514kNkerQ0L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
             />
@@ -107,7 +107,7 @@ function Home() {
             <Product
               id="90829332"
               title="All the light we cannot see: The Breathtaking World Wide Bestseller Paperback"
-              price={199.99}
+              price={25.99}
               rating={4}
               image="https://images-eu.ssl-images-amazon.com/images/I/514kNkerQ0L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
             />
