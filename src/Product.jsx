@@ -22,29 +22,29 @@ function Product({ id, title, price, rating, image }) {
   };
 
   return (
-    <div>
-      <div className="product">
-        <div className="product__info">
-          <p><strong>{title}</strong></p>
-          <p className="product__price">
-            <small>$</small>
-            <strong>{price}</strong>
-          </p>
-          <div className="product__rating">
-            {Array(rating)
-              .fill()
-              .map((_, i) => (
-                <p key={i}>⭐</p>
-              ))}
-          </div>
-        </div>
+    <div className="product">
+      <div className="product__info">
+        <p><strong>{title}</strong></p>
 
-        <img
-          src={image}
-        />
+        <p className="product__price">
+          <small>$</small>
+          <strong>{price}</strong>
+        </p>
 
-        <button onClick={addToBasket}>Add to Basket</button>
+        {/* <div className="product__rating">
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p key={i}>⭐</p>
+            ))}
+        </div> */}
       </div>
+
+      <img
+        src={image} className="product__image"
+      />
+
+      <button onClick={addToBasket}>Add to Basket</button>
     </div>
   );
 }
