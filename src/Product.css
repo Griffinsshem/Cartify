@@ -37,6 +37,8 @@
 
 .product__price {
   margin-top: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .product__info {
