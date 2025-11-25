@@ -5,9 +5,28 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import { auth } from './Firebase';
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
+
+  const getIntials = (email) => {
+    if (!email) return "Guest";
+    const name = email.split("@")[0];
+    const initials = name
+      .split(/[^A-Za-z]/)
+      .filter(Boolean)
+      .map((word) => word[0].toUpperCase())
+      .join("");
+    return initials.slice(0, 2);
+  };
+
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
+
   return (
     <div className="header">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -23,10 +42,14 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to="/login" style={{ textDecoration: "none" }}>
-          <div className="nav__item">
-            <span className="nav__itemLineOne">Hello Guest</span>
-            <span className="nav__itemLineTwo">Sign in</span>
+        <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
+          <div onClick={handleAuth} className="nav__item">
+            <span className="nav__itemLineOne">
+              Hello {user ? getIntials(user.email) : "Guest"}
+            </span>
+            <span className="nav__itemLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
 
@@ -41,8 +64,6 @@ function Header() {
             <span className="nav__itemLineTwo nav__basketCount">{basket.length}</span>
           </div>
         </Link>
-
-
 
       </div>
     </div>
