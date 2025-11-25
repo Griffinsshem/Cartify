@@ -1,6 +1,7 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import MonetizationOnSharpIcon from '@mui/icons-material/MonetizationOnSharp';
 
 
 function Product({ id, title, price, rating, image }) {
@@ -27,7 +28,7 @@ function Product({ id, title, price, rating, image }) {
         <p><strong>{title}</strong></p>
 
         <p className="product__price">
-          <small>$</small>
+          <small><MonetizationOnSharpIcon /></small>
           <strong>{price}</strong>
         </p>
 
