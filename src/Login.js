@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth } from './Firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 
+// Lucide Icons
+import { Mail, Lock, ArrowRight } from "lucide-react";
 
 function Login() {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/'); // redirect after login
+      navigate('/');
     } catch (error) {
       alert(error.message);
     }
@@ -24,7 +26,7 @@ function Login() {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/'); // redirect after register
+      navigate('/');
     } catch (error) {
       alert(error.message);
     }
@@ -32,48 +34,58 @@ function Login() {
 
   return (
     <div className='login'>
-      <Link to='/' style={{ textDecoration: "none" }}>
-        <div className='login__logo'>
-          <h2 className='login__logoTitle'>Cartify Login</h2>
-        </div>
+
+      <Link to='/' className='login__logo'>
+        <h2 className='login__logoTitle'>Cartify</h2>
       </Link>
 
       <div className='login__container'>
-        <h1>Sign-in</h1>
-        <form>
-          <h5>E-mail</h5>
-          <input
-            type='text'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
+        <h1>Welcome Back</h1>
+        <p className='login__subtitle'>Sign in to continue shopping</p>
 
-          <h5>Password</h5>
-          <input
-            type='password'
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
+        <form>
+
+          {/* EMAIL */}
+          <div className='input__group'>
+            <Mail className='input__icon' size={18} />
+            <input
+              type='text'
+              placeholder='Enter your email'
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </div>
+
+          {/* PASSWORD */}
+          <div className='input__group'>
+            <Lock className='input__icon' size={18} />
+            <input
+              type='password'
+              placeholder='Enter your password'
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+          </div>
 
           <button
             type='submit'
             className='login__signInButton'
             onClick={signIn}
           >
-            Sign In
+            Sign In <ArrowRight size={16} />
           </button>
+
         </form>
 
-        <p>
-          By signing-in you agree to Cartify's Conditions of Use & Sale.
-          Please see our Privacy Notice, Cookies Notice, and Interest-Based Ads Notice.
+        <p className='login__terms'>
+          By signing in, you agree to Cartify’s Terms & Conditions.
         </p>
 
         <button
           className='login__registerButton'
           onClick={register}
         >
-          Create your Cartify Account
+          Create Account
         </button>
       </div>
     </div>
