@@ -4,21 +4,29 @@ import { NumericFormat } from 'react-number-format';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
 
+// Lucide Icons
+import { Gift, CreditCard } from "lucide-react";
 
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
-  return (
 
+  return (
     <div className="subtotal">
+
       <NumericFormat
         renderText={(value) => (
           <>
-            <p>
-              Subtotal ({basket.length} items): <strong>${value}</strong>
+            <p className="subtotal__text">
+              Subtotal ({basket.length} items)
             </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" /> This order contains a gift
-            </small>
+
+            <h2 className="subtotal__price">${value}</h2>
+
+            <label className="subtotal__gift">
+              <input type="checkbox" />
+              <Gift size={16} />
+              This order contains a gift
+            </label>
           </>
         )}
         decimalScale={2}
@@ -27,6 +35,12 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"$"}
       />
+
+      <button className="subtotal__button">
+        <CreditCard size={18} />
+        Proceed to Checkout
+      </button>
+
     </div>
   );
 }
