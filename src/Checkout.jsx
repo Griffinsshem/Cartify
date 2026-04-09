@@ -3,24 +3,34 @@ import './Checkout.css';
 import CheckoutProduct from './CheckoutProduct';
 import Subtotal from './Subtotal';
 import { useStateValue } from './StateProvider';
-import { SportsBasketball } from '@mui/icons-material';
+
+// Lucide Icons
+import { ShoppingBag } from "lucide-react";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="checkout">
+
+      {/* LEFT */}
       <div className='checkout__left'>
+
         <img
           className="checkout__ad"
-          src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
-          alt=""
+          src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1400&q=80"
+          alt="banner"
         />
-        <div>
-          <h2 className="checkout__title">
-            Your Shopping Basket
-          </h2>
+
+        <div className="checkout__sectionHeader">
+          <ShoppingBag size={22} />
+          <h2>Your Shopping Basket</h2>
+        </div>
+
+        <div className="checkout__items">
           {basket.map(item => (
             <CheckoutProduct
+              key={item.id}
               id={item.id}
               title={item.title}
               image={item.image}
@@ -29,11 +39,14 @@ function Checkout() {
             />
           ))}
         </div>
+
       </div>
 
+      {/* RIGHT */}
       <div className="checkout__right">
         <Subtotal />
       </div>
+
     </div>
   );
 }
