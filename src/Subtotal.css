@@ -2,32 +2,52 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
-  height: 100px;
+  width: 320px;
   padding: 20px;
-  background-color: #f3f3f3;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.subtotal__text {
+  font-size: 14px;
+  color: #555;
+}
+
+.subtotal__price {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  color: #111;
 }
 
 .subtotal__gift {
   display: flex;
   align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.subtotal__gift>input {
-  margin-right: 5px;
+.subtotal__gift input {
+  cursor: pointer;
 }
 
-.subtotal>button {
-  background: #07119b;
-  border-radius: 2px;
-  width: 100%;
-  height: 30px;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: #e6dfcf #b3b2af #dfdcd4;
-  color: #fff;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.subtotal__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ff9900;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.subtotal__button:hover {
+  background: #e68a00;
 }
