@@ -15,7 +15,7 @@ function Home() {
             alt="Home Banner"
           />
 
-          <div className="home__overlay"></div>
+          {/* <div className="home__overlay"></div> */}
 
           <div className="home__heroContent">
             <h1 className="home__heroText">Cartify</h1>
