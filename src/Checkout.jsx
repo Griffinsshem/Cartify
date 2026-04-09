@@ -16,11 +16,11 @@ function Checkout() {
       {/* LEFT */}
       <div className='checkout__left'>
 
-        <img
+        {/* <img
           className="checkout__ad"
           src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1400&q=80"
           alt="banner"
-        />
+        /> */}
 
         <div className="checkout__sectionHeader">
           <ShoppingBag size={22} />
