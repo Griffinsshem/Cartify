@@ -1,12 +1,11 @@
 import React from 'react';
 import './Header.css';
-import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from './Firebase';
 
+// Lucide Icons
+import { ShoppingCart, Search, Store } from "lucide-react";
 
 function Header() {
   const [{ basket, user }] = useStateValue();
@@ -30,20 +29,27 @@ function Header() {
 
   return (
     <div className="header">
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <div className="header__logo">
-          <LocalGroceryStoreIcon className="header__logoImage" fontSize="large" />
-          <h2 className="header__logoTitle">Cartify</h2>
-        </div>
+
+      {/* LOGO */}
+      <Link to="/" className="header__logo">
+        <Store size={28} />
+        <h2>Cartify</h2>
       </Link>
 
+      {/* SEARCH */}
       <div className="header__search">
-        <input type="text" className="header__searchInput" placeholder="Search for products..." />
-        <SearchIcon className="header__searchIcon" />
+        <Search className="header__searchIcon" size={18} />
+        <input
+          type="text"
+          className="header__searchInput"
+          placeholder="Search products..."
+        />
       </div>
 
+      {/* NAV */}
       <div className="header__nav">
-        <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
+
+        <Link to={!user && "/login"} className="header__link">
           <div onClick={handleAuth} className="nav__item">
             <span className="nav__itemLineOne">
               Hello {user ? getIntials(user.email) : "Guest"}
@@ -59,10 +65,10 @@ function Header() {
           <span className="nav__itemLineTwo">Cart</span>
         </div>
 
-        <Link to="/checkout" style={{ textDecoration: "none" }}>
+        <Link to="/checkout" className="header__link">
           <div className="nav__itemBasket">
-            <ShoppingBasketIcon />
-            <span className="nav__itemLineTwo nav__basketCount">{basket.length}</span>
+            <ShoppingCart size={22} />
+            <span className="nav__basketCount">{basket.length}</span>
           </div>
         </Link>
 
