@@ -1,15 +1,15 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
-import MonetizationOnSharpIcon from '@mui/icons-material/MonetizationOnSharp';
 
+// Lucide Icons
+import { DollarSign, ShoppingCart } from "lucide-react";
 
 function Product({ id, title, price, rating, image }) {
 
   const [state, dispatch] = useStateValue();
 
   const addToBasket = () => {
-    //dispatch the item into the data layer
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -24,28 +24,27 @@ function Product({ id, title, price, rating, image }) {
 
   return (
     <div className="product">
-      <div className="product__info">
-        <p><strong>{title}</strong></p>
-
-        <p className="product__price">
-          <small><MonetizationOnSharpIcon /></small>
-          <strong>{price}</strong>
-        </p>
-
-        {/* <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p key={i}>⭐</p>
-            ))}
-        </div> */}
-      </div>
 
       <img
-        src={image} className="product__image"
+        src={image}
+        className="product__image"
+        alt={title}
       />
 
-      <button onClick={addToBasket}>Add to Basket</button>
+      <div className="product__info">
+        <p className="product__title">{title}</p>
+
+        <div className="product__price">
+          <DollarSign size={16} />
+          <strong>{price}</strong>
+        </div>
+      </div>
+
+      <button onClick={addToBasket} className="product__button">
+        <ShoppingCart size={16} />
+        Add to Cart
+      </button>
+
     </div>
   );
 }
